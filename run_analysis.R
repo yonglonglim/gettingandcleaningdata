@@ -44,4 +44,4 @@ allData_sd <- sapply(allData,sd,na.rm=TRUE)
 library(data.table)
 datatable <- data.table(allData)
 tidyData <- datatable[,lapply(.SD,mean),by="Activity,Subject"]
-write.table(tidyData,file="tidydata.csv",sep=",",row.names = FALSE)
+write.table(tidyData,file="tidydata.txt",sep=",",row.names = FALSE)
